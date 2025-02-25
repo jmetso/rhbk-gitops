@@ -1,0 +1,19 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    argocd.argoproj.io/sync-wave: "200"
+  name: postgresql
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app: tasklist
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  volumeMode: Filesystem
+
