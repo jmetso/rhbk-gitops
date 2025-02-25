@@ -3,7 +3,7 @@ kind: Certificate
 metadata:
   name: rhbk-tls-certificate
   annotations:
-    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "50"
 spec:
   commonName: sso.apps.cluster-zx8zh.dynamic.redhatworkshops.io

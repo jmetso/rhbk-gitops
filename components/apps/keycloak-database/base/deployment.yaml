@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: postgresql
   annotations:
-    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "200"
   labels:
     app: sso

@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: rhbk-operator
   annotations:
-    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "100"
 spec:
   channel: stable-v26.0

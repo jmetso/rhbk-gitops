@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: rhbk
   annotations:
-    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "50"
   labels:
     kubernetes.io/metadata.name: rhbk

@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/component: database
     app.kubernetes.io/instance: sso
   annotations:
-    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "200"
 spec:
   ipFamilies:
