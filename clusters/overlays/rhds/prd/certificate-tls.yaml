@@ -6,9 +6,9 @@ metadata:
     app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
     argocd.argoproj.io/sync-wave: "50"
 spec:
-  commonName: sso.apps.cluster-zx8zh.dynamic.redhatworkshops.io
+  commonName: sso.apps.cluster-j5459.dynamic.redhatworkshops.io
   dnsNames:
-    - rhbk.apps.cluster-zx8zh.dynamic.redhatworkshops.io
+    - rhbk.apps.cluster-j5459.dynamic.redhatworkshops.io
   isCA: false
   issuerRef:
     group: cert-manager.io
