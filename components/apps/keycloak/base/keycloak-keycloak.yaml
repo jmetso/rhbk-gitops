@@ -1,0 +1,37 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: 'https://github.com/jmetso/keycloak-gitops'
+    argocd.argoproj.io/sync-wave: "300"
+  labels:
+    app: sso
+    app.kubernetes.io/component: server
+    app.kubernetes.io/instance: sso
+    app.kubernetes.io/part-of: sso
+  name: keycloak
+spec:
+  bootstrapAdmin:
+    user:
+      secret: rhbk-init-admin
+  db:
+    database: keycloak
+    host: postgresql
+    passwordSecret:
+      key: database-password
+      name: postgresql
+    port: 5432
+    usernameSecret:
+      key: database-user
+      name: postgresql
+    vendor: postgres
+  hostname:
+    hostname: ''
+    strict: false
+  http:
+    httpEnabled: true
+    tlsSecret: rhbk-tls-certificate
+  ingress:
+    enabled: true
+  instances: 1
+
