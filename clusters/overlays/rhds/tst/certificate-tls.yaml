@@ -4,7 +4,7 @@ metadata:
   name: rhbk-tls-certificate
   annotations:
     app.openshift.io/vcs-uri: 'https://github.com/jmetso/rhbk-gitops.git'
-    argocd.argoproj.io/sync-wave: "50"
+    argocd.argoproj.io/sync-wave: "60"
 spec:
   commonName: sso-test.apps.cluster-j5459.dynamic.redhatworkshops.io
   dnsNames:
