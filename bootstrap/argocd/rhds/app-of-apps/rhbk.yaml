@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rhbk-apps
+  labels:
+    gitops.openshift.io/controllerNamespace: gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: false
+    syncOptions:
+      - CreateNamespace=true
+    managedNamespaceMetadata:
+      labels:
+        app: sso
+        argocd.argoproj.io/managed-by: openshift-gitops
+  source:
+    path: bootstrap/argocd/rhds/apps
+    repoURL: https://github.com/jmetso/rhbk-gitops.git
+    targetRevision: main
+
