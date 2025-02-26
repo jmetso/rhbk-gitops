@@ -5,10 +5,18 @@ Multi cluster structure to deploy [Red Hat Build of Keycloak](https://access.red
 Folder structure:
 
 ```
- |____environments
+ |____bootstrap
+ | |____argocd
+ |   |____rhds
+ |     |____apps         - argocd apps for rhds cluster overlays
+ |     |____app-of-apps  - app-of-apps for rhds cluster argocd apps
+ |
+ |____clusters
  | |____overlays
- |   |____tst            - test env overlay for base config
- |   |____prd            - prod env overlay for base config
+ |   |____rhds
+ |     |____tst          - rhds cluster overlay for tst env config
+ |     |____prd          - rhds cluster overlay for prd env config
+ |
  |____components
  | |____apps
  |   |____keycloak
@@ -17,16 +25,12 @@ Folder structure:
  |   | |____base         - keycloak db base config
  |   |____keycloak-operator
  |     |____base         - keycloak operator base config
- |____clusters
- | |____overlays
- |   |____rhds
- |   | |____tst          - rhds cluster overlay for tst env config
- |   | |____prd          - rhds cluster overlay for prd env config
- |____boostrap
-   |____argocd
-     |____rhds
-       |____apps         - argocd apps for rhds cluster overlays
-       |____app-of-apps  - app-of-apps for rhds cluster argocd apps
+ |
+ |____environments
+   |____overlays
+     |____tst            - test env overlay for base config
+     |____prd            - prod env overlay for base config
+
 ```
 
 
