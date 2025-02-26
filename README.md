@@ -1,6 +1,8 @@
 # Red Hat build of Keycloak GitOps repository
 
-Multi cluster structure to deploy [Red Hat Build of Keycloak](https://access.redhat.com/products/red-hat-build-of-keycloak/). Currently only one cluster configured.
+Multi cluster structure to deploy [Red Hat Build of Keycloak](https://access.redhat.com/products/red-hat-build-of-keycloak/). 
+
+Currently only one cluster configured.
 
 Folder structure:
 
