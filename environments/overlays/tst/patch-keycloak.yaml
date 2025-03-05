@@ -8,6 +8,6 @@
       cpu: 1
       memory: 1Gi
 
-- op: add
-  path: /spec/image
-  value: registry.redhat.io/rhbk/keycloak-rhel9:26.0-6
+#- op: add
+#  path: /spec/image
+#  value: registry.redhat.io/rhbk/keycloak-rhel9:26.0-6
