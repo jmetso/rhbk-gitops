@@ -33,6 +33,5 @@ spec:
     tlsSecret: rhbk-tls-certificate
   ingress:
     enabled: true
-  image: registry.redhat.io/rhbk/keycloak-rhel9:26.0-7
   instances: 1
 
