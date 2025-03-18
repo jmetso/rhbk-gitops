@@ -31,7 +31,5 @@ spec:
   http:
     httpEnabled: true
     tlsSecret: rhbk-tls-certificate
-  ingress:
-    enabled: true
   instances: 1
 
